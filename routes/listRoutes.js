@@ -1,9 +1,6 @@
 const listRoutes = require("express").Router();
+const {ListController} = require("../controllers")
 
-listRoutes.get("/",(req,res)=>{
-    res.json({
-        msg:"Bisa masuk routes list"
-    })
-})
+listRoutes.get("/",ListController.getAllList);
 
 module.exports = listRoutes;
